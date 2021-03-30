@@ -6,6 +6,16 @@ console.log(now);
 
 var time;
 
+var schdElNine = $('input[name="inputNine"]').val();
+var schdElTen = $('input[name="inputTen"]').val();
+var schdElEleven = $('input[name="inputEleven"]').val();
+var schdElTwelve = $('input[name="inputTwelve"]').val();
+var schdElOne = $('input[name="inputOne"]').val();
+var schdElTwo = $('input[name="inputTwo"]').val();
+var schdElThree = $('input[name="inputThree"]').val();
+var schdElFour = $('input[name="inputFour"]').val();
+var schdElFive = $('input[name="inputFive"]').val();
+
 
 // if (time = "now") {
 // add class .present to div class description};
@@ -18,6 +28,6 @@ var time;
 // };
 
 
-// how to get "description" to accept input??
+
 
 // how to get "saveBtn" to save to local storage??
