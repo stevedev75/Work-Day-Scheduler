@@ -1,33 +1,50 @@
-var today = moment();
-$("#currentDay").text(today.format("MMM Do, YYYY"));
+
 
 var now = moment().format('LT'); 
 console.log(now);
 
-var time;
+$(document).ready(function (){
+  $('.saveBtn').on("click", function () {
+    var text = $(this).siblings("description").val();
+    var time = $(this).parent().attr("id");
+        
+    localStorage.setItem(time, text);
+    console.log("save button clicked")        
+})
 
-var schdElNine = $('input[name="inputNine"]').val();
-var schdElTen = $('input[name="inputTen"]').val();
-var schdElEleven = $('input[name="inputEleven"]').val();
-var schdElTwelve = $('input[name="inputTwelve"]').val();
-var schdElOne = $('input[name="inputOne"]').val();
-var schdElTwo = $('input[name="inputTwo"]').val();
-var schdElThree = $('input[name="inputThree"]').val();
-var schdElFour = $('input[name="inputFour"]').val();
-var schdElFive = $('input[name="inputFive"]').val();
+function timeTracker() {
+  var timeNow = moment().hour();
 
-
-// if (time = "now") {
-// add class .present to div class description};
-// }
-// else if (time = "past") {
-// add class .past to div class description);
-// }
-// else {
-// add class.future to div class description);
-// };
+var today = moment();
+$("#currentDay").text(today.format("MMM Do, YYYY"));
 
 
+$('.time-block').each(function () {
+var blockTime = parseInt($(this).attr('id').split('hour')[1]
+    );
+
+    
+if (blockTime < timeNow) {
+    $(this).removeClass("future");
+    $(this).removeClass("present");
+    $(this).addClass("past");
+}
+
+else if (blockTime === timeNow) {
+    $(this).removeClass("past");
+    $(this).removeClass("future");
+    $(this).addClass("present");
+}
+
+else {
+    $(this).removeClass("present");
+    $(this).removeClass("past");
+    $(this).addClass("future");
+         }
+    })
+} 
 
 
-// how to get "saveBtn" to save to local storage??
+
+timeTracker(); 
+})
