@@ -1,5 +1,3 @@
-
-
 var now = moment().format('LT'); 
 console.log(now);
 
@@ -7,30 +5,29 @@ $(document).ready(function (){
   $('.saveBtn').on("click", function () {
     var text = $(this).siblings("description").val();
     var time = $(this).parent().attr("id");
-        
     localStorage.setItem(time, text);
+
     console.log("save button clicked")        
 })
 
-function timeTracker() {
-  var timeNow = moment().hour();
+function tracker() {
+  var rightNow = moment().hour();
 
 var today = moment();
 $("#currentDay").text(today.format("MMM Do, YYYY"));
 
 
 $('.time-block').each(function () {
-var blockTime = parseInt($(this).attr('id').split('hour')[1]
+var blockTime = parseInt($(this).attr('id')
     );
 
-    
-if (blockTime < timeNow) {
+if (blockTime < rightNow) {
     $(this).removeClass("future");
     $(this).removeClass("present");
     $(this).addClass("past");
 }
 
-else if (blockTime === timeNow) {
+else if (blockTime === rightNow) {
     $(this).removeClass("past");
     $(this).removeClass("future");
     $(this).addClass("present");
@@ -44,7 +41,8 @@ else {
     })
 } 
 
+$("#9 .description").val(localStorage.getItem("9"));
 
 
-timeTracker(); 
+tracker(); 
 })
