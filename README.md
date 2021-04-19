@@ -1,4 +1,4 @@
-# JavaScript Coding Quiz
+# JavaScript Work Day Scheduler
 
 ## Application to generate a workday schedule (9am to 5pm) using some sample code provided by Trilogy.
 
