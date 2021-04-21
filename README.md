@@ -11,12 +11,15 @@ This application solves the problem often of how to build an application that us
 
 In this project, I learned a lot -- more specifically -- about jQuery and traversing the DOM.
 
-Please see screenshot to preview UI:
+Please see screenshots to preview UI:
 ![image](https://user-images.githubusercontent.com/77076615/113415057-65f21300-938c-11eb-884d-4eafce735dab.png)
+
+![image](https://user-images.githubusercontent.com/77076615/115593246-46228080-a2a2-11eb-8c60-1443f9382475.png)
 
 Please see the URL to the deployed web application below
 https://stevedev75.github.io/Work-Day-Scheduler/
 
+Contact me: stephendever.cr@gmail.com
 
 Copyright (c) 2021 Stephen Dever
 
